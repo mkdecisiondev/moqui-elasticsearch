@@ -27,14 +27,14 @@
                 <dispatcher>REQUEST</dispatcher>
             </filter>
 
-            <filter name="ElasticAuthFilter" class="org.moqui.impl.webapp.MoquiAuthFilter" async-supported="true">
-                <init-param name="permission" value="ElasticRemote"/>
-                <url-pattern>/elastic/*</url-pattern>
-            </filter>
-            <filter name="KibanaAuthFilter" class="org.moqui.impl.webapp.MoquiAuthFilter" async-supported="true">
-                <init-param name="permission" value="KibanaRemote"/>
-                <url-pattern>/kibana/*</url-pattern>
-            </filter>
+            <!--<filter name="ElasticAuthFilter" class="org.moqui.impl.webapp.MoquiAuthFilter" async-supported="true">-->
+                <!--<init-param name="permission" value="ElasticRemote"/>-->
+                <!--<url-pattern>/elastic/*</url-pattern>-->
+            <!--</filter>-->
+            <!--<filter name="KibanaAuthFilter" class="org.moqui.impl.webapp.MoquiAuthFilter" async-supported="true">-->
+                <!--<init-param name="permission" value="KibanaRemote"/>-->
+                <!--<url-pattern>/kibana/*</url-pattern>-->
+            <!--</filter>-->
 
             <servlet name="ElasticSearchProxy" class="org.eclipse.jetty.proxy.ProxyServlet$Transparent" load-on-startup="1" async-supported="true">
                 <!-- this proxies to the embedded ElasticSearch instance -->
